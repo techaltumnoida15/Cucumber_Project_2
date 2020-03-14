@@ -14,25 +14,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 public class HomePage_StepDefinition {
-	HomePage homePage;
+	
 	WebDriver driver;
+	HomePage homePage;
 	
-	@Before
-	public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\browserDriversEXE\\chromedriver.exe");
-		driver = new ChromeDriver();
-		
-		driver.manage().window().maximize();
-		driver.get("http://www.cheapoair.com");
-		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		homePage = new HomePage(driver);
-	}
-	
-	@After
-	public void quitBrowser() {
-	driver.quit();	
+	public HomePage_StepDefinition(ServiceHooks hooks) {
+		homePage = new HomePage(hooks.baseClass.driver);
 	}
 	
 	@Given("User is on home page")
@@ -42,7 +29,7 @@ public class HomePage_StepDefinition {
 
 	@Then("Select OneWay")
 	public void select_OneWay() {
-	   
+	   homePage.clickOnOneWay();
 	}
 
 	@Then("Enter from city")

@@ -12,12 +12,10 @@ Feature: Automate home page features such as initiate search etc
     Then Select depart date
     And Click on search button
     Then Listing page should load
+    
+    
+    
+    
+ 
 
-  @Smoke @Sanity
-  Scenario: Initiate Search for ROUNDTRIP
-    Then Select RoundTrip
-    Then Enter from city
-    And Enter to city
-    Then Select depart date
-    And Click on search button
-    Then Listing page should load
+  

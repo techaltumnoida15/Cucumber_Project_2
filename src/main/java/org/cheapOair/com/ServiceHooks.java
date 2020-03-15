@@ -17,8 +17,8 @@ public class ServiceHooks {
 		
 		baseClass = new BaseClass();
 		//baseClass.selectBrowser("firefox");
-		//baseClass.selectBrowser(Browser.CHROME.toString());
-		baseClass.selectBrowser(Browser.FIREFOX.toString());
+		baseClass.selectBrowser(Browser.CHROME.toString());
+		//baseClass.selectBrowser(Browser.FIREFOX.toString());
 	}
 	
 	

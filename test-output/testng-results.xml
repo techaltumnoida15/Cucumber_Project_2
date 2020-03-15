@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109721" started-at="2020-03-14T07:57:34Z" finished-at="2020-03-14T07:59:24Z">
+  <suite name="Default suite" duration-ms="32021" started-at="2020-03-15T08:48:12Z" finished-at="2020-03-15T08:48:44Z">
     <groups>
       <group name="cucumber">
-        <method signature="TestRunner.feature(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.techAltum.runner.TestRunner@e25b2fe]" name="feature" class="org.techAltum.runner.TestRunner"/>
+        <method signature="TestRunner.feature(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.techAltum.runner.TestRunner@42dafa95]" name="feature" class="org.techAltum.runner.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="109721" started-at="2020-03-14T07:57:34Z" finished-at="2020-03-14T07:59:24Z">
+    <test name="Default test" duration-ms="32021" started-at="2020-03-15T08:48:12Z" finished-at="2020-03-15T08:48:44Z">
       <class name="org.techAltum.runner.TestRunner">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:org.techAltum.runner.TestRunner@e25b2fe]" name="beforeClass" is-config="true" duration-ms="134" started-at="2020-03-14T07:57:34Z" finished-at="2020-03-14T07:57:35Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:org.techAltum.runner.TestRunner@42dafa95]" name="beforeClass" is-config="true" duration-ms="134" started-at="2020-03-15T08:48:12Z" finished-at="2020-03-15T08:48:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.techAltum.runner.TestRunner@e25b2fe]" name="feature" duration-ms="109456" started-at="2020-03-14T07:57:35Z" description="Cucumber Project" data-provider="features" finished-at="2020-03-14T07:59:24Z">
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.techAltum.runner.TestRunner@42dafa95]" name="feature" duration-ms="31737" started-at="2020-03-15T08:48:12Z" description="Cucumber Project" data-provider="features" finished-at="2020-03-15T08:48:44Z">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:org.techAltum.runner.TestRunner@e25b2fe]" name="afterClass" is-config="true" duration-ms="71" started-at="2020-03-14T07:59:24Z" finished-at="2020-03-14T07:59:24Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:org.techAltum.runner.TestRunner@42dafa95]" name="afterClass" is-config="true" duration-ms="88" started-at="2020-03-15T08:48:44Z" finished-at="2020-03-15T08:48:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

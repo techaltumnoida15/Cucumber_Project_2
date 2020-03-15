@@ -57,6 +57,6 @@ public class BaseClass {
 	}
 
 	public void closeBrowser() {
-		driver.quit();
+		//driver.quit();
 	}
 }

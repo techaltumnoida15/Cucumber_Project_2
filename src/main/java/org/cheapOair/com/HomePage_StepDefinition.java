@@ -3,6 +3,7 @@ package org.cheapOair.com;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.dataReader.com.ReadDataFromXL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +19,7 @@ public class HomePage_StepDefinition {
 	WebDriver driver;
 	HomePage homePage;
 	
+	
 	public HomePage_StepDefinition(ServiceHooks hooks) {
 		homePage = new HomePage(hooks.baseClass.driver);
 	}
@@ -28,34 +30,19 @@ public class HomePage_StepDefinition {
 	}
 
 	@Then("Select OneWay")
-	public void select_OneWay() {
+	public void select_OneWay() throws Exception{
 	   homePage.clickOnOneWay();
 	}
 
-	@Then("Enter from city")
-	public void enter_from_city() {
-	    //driver.findElement(By.id("abc")).sendKeys("LAX");   //Hard Coded
-		
-		//driver.findElement(By.id("abc")).sendKeys(getDataFromPropFile);   //Prop File
-		
-		//driver.findElement(By.id("abc")).sendKeys(getDataFromXL);    //Get Data from XL
-		
-		homePage.enterFromCity("LAS");
-	}
-
-	@Then("Enter to city")
-	public void enter_to_city() {
-	  
-	}
-
 	@Then("Select depart date")
-	public void select_depart_date() {
-	   
+	public void select_depart_date() throws Exception {
+		String[][] data = ReadDataFromXL.readData(2);
+		homePage.enterDepartDate(data[1][0].toString());
 	}
 
 	@Then("Click on search button")
 	public void click_on_search_button() {
-	   
+		
 	}
 
 	@Then("Listing page should load")
@@ -65,7 +52,7 @@ public class HomePage_StepDefinition {
 
 	@Then("Select RoundTrip")
 	public void select_RoundTrip() {
-
+		
 	}
 	
 	@Then("Enter fromCity")
@@ -82,7 +69,7 @@ public class HomePage_StepDefinition {
 	}
 	
 	@Then("Enter to city {string}")
-	public void enter_to_city(String toCity) {
+	public void enter_to_city(String toCity) throws Exception {
 	   System.out.println("To city is = " + toCity);
 	   homePage.enterToCity(toCity);
 	}
